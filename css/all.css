@@ -1,0 +1,13 @@
+body{
+    background: #c7e4e9 url(../images/2.jpg) no-repeat center top;
+}
+#HeadContainer{
+    padding: 10px;
+}
+#HeadTop{
+    text-shadow:2px 2px 1px;
+    color: #becfce;
+}
+.NavBack{
+    background: rgb(189,172,156);
+}

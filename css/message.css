@@ -1,0 +1,135 @@
+.ctitle b{
+    font-size: 22px;
+    color: #ffffff;
+    background: rgb(189,172,156);
+    padding: 10px 0; 
+    width: 200px;
+    text-align: center;
+    border-radius: 0 30px 30px 0;
+    border-left: #dae1e4 6px solid; 
+    display:block; 
+    margin-left: 30px;
+}
+.ctitle span{ 
+    float:right; 
+    font-size:16px;
+    color: #becfce;
+    position:absolute; 
+    right:20px ; 
+    bottom:10px;
+}
+
+/**
+时间轴的css该成qq聊天式的留言板
+*/
+.timeline {
+    list-style: none;
+  }
+  .timeline > li {
+    margin-bottom: 200px;
+    position: relative;
+  }
+  .timeline > li:before,
+  .timeline > li:after {
+    content: " ";
+    display: table;
+  }
+
+  .timeline > li > .timeline-panel {
+    width: 46%;
+    float: right;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  }
+  .timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+  }
+  .timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: left;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  .timeline > li.timeline-inverted >.timeline-panel > span{
+    float: left;
+  }
+  .timeline > li >.timeline-panel > span{
+      float: right;
+  }
+
+  /** 响应式开发 **/
+  @media (max-width: 991px) {
+    .timeline li .timeline-panel {
+      width: 44%;
+    }
+  }
+  
+  @media (max-width: 780px) {
+    ul.timeline li .timeline-panel {
+      width: calc(100% - 90px);
+      width: -moz-calc(100% - 90px);
+      width: -webkit-calc(100% - 90px);
+    }
+  
+  
+    ul.timeline > li > .timeline-panel {
+      float: left;
+    }
+  
+    ul.timeline > li > .timeline-panel:before {
+      border-left-width: 0;
+      border-right-width: 15px;
+      left: -15px;
+      right: auto;
+    }
+  
+    ul.timeline > li > .timeline-panel:after {
+      border-left-width: 0;
+      border-right-width: 14px;
+      left: -14px;
+      right: auto;
+    }
+
+    .timeline > li >.timeline-panel > span{
+        float: left;
+    }
+
+    .ctitle span{ 
+        display: none;
+        /**
+        visibility:hidden
+        */
+    }
+  }

@@ -1,0 +1,17 @@
+.card{
+    margin: 2%;
+    padding: 3px;
+    background: rgb(35, 46, 46);
+}
+.Titlep{
+    text-align: center;
+}
+.Titlep a{
+    color:rgb(11, 64, 99);
+}
+.Topthree{
+    padding: 30px;
+}
+.Topimg{
+    display: inline;
+}

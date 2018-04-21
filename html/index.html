@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=0.5,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人博客--首页</title>
+
+    <!-- Bootstrap4 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"> 
+    <!-- bootstrap的字体图标 -->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- timeline.css -->
+    <link rel="stylesheet" href="../css/timeline.css">
+
+    <!-- jQuery文件 -->
+<!--    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <!-- 用于弹窗、提示、下拉菜单 -->
+<!--    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script> -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap4 核心 -->
+<!--    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- 滚动显示 -->
+<!--    <script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script> -->
+    <script src="../js/scrollreveal.js"></script>
+
+    <!-- 自己的东西 -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <script src="../js/scroll.js"></script>
+    <script src="../js/tooltip.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶层 -->
+    <div id="HeadContainer" class="container" data-scroll-reveal="enter right over 1s and move 200px after 0.1s">
+        <h1 id="HeadTop">个人博客</h1>
+    </div>
+    <br>
+    <!--                     导航栏               -->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark NavBack">
+            <div class="col-md-6" data-scroll-reveal="enter bottom over 1.5s and move 200px after 0.6s">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/index.html" data-toggle="tooltip" title="HEAD">
+                                <span class="glyphicon glyphicon-home"></span>
+                                首页
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/me.html" data-toggle="tooltip" title="ME">
+                                <span class="glyphicon glyphicon-user"></span>
+                                关于我
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../html/study.html" data-toggle="tooltip" title="STUDY">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                学无止境
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../html/message.html" data-toggle="tooltip" title="MESSAGE">
+                                <span class="glyphicon glyphicon-hand-right"></span>
+                                留言
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../html/regist.html" data-toggle="tooltip" title="REGIST">
+                                <span class="glyphicon glyphicon-record"></span>
+                                假注册
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="form-inline" style="float:right;">
+                    <div class="input-group">
+                        <span class="input-group-addon success">
+                            <a class="btn-block" href="#" style="color: lightslategray">查询</a>
+                        </span>
+                        <input list="dl" type="text" class="form-control" placeholder="搜索的内容..." />
+                        <datalist id="dl">
+                            <option value="IE"></option>
+                            <option value="Firefox"></option>
+                            <option value="chrome"></option>
+                            <option value="safari"></option>
+                        </datalist>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!--                     三个图框                 -->
+    <article>
+        <div class="container">
+            <div class="row" data-scroll-reveal="enter bottom">
+                <div class="col-md-4 Topthree">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img class="img-rounded img-fluid Topimg" src="../images/1.jpg" data-scroll-reveal="enter top over 1s and move 200px after 0.1s">
+                        </a>
+                        <div class="caption bg-secondary" data-scroll-reveal="enter left over 1s and move 200px after 0.2s">
+                            <p class="Titlep">
+                                <a href="#">前端</a>
+                            </p>
+                            <p class="text-white">sdasdsadasd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Topthree">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img class="img-rounded img-fluid Topimg" src="../images/3.jpg" data-scroll-reveal="enter top over 1s and move 200px after 0.1s">
+                        </a>
+                        <div class="caption bg-secondary" data-scroll-reveal="enter bottom over 1s and move 200px after 0.2s">
+                            <p class="Titlep">
+                                <a href="#">开发</a>
+                            </p>
+                            <p class="text-white">sdasdsadasd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 Topthree">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img class="img-rounded img-fluid Topimg" src="../images/1.jpg" data-scroll-reveal="enter top over 1s and move 200px after 0.1s">
+                        </a>
+                        <div class="caption bg-secondary" data-scroll-reveal="enter right over 1s and move 200px after 0.2s">
+                            <p class="Titlep">
+                                <a href="#">RBQ</a>
+                            </p>
+                            <p class="text-white">sdsadsad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--               时间线                  -->
+            <ul class="timeline">
+                <li>
+                    <div class="tldate" data-scroll-reveal="enter left over 1s">
+                        <button class="btn btn-secondary btn-block">2018</button>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tl-circ"></div>
+                    <div class="timeline-panel" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>Vue.js</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    3 days ago
+                                </small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>组件开发!</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="timeline-inverted">
+                    <div class="tl-circ"></div>
+                    <div class="timeline-panel" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>Vue.js</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    3/10/2018
+                                </small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>数据渲染</p>
+                            <p>双向绑定！</p>
+                            <p>单向绑定！！！</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tldate" data-scroll-reveal="enter left over 1s">
+                        <button class="btn btn-secondary btn-block">2017</button>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tl-circ"></div>
+                    <div class="timeline-panel" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>bootstrap</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    10/22/2017
+                                </small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>节省大多数时间修改样式和动画效果.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-panel" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>bootstrap</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    9/16/2017
+                                </small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>一个类解决各种问题</p>
+                            <p>一个快速开发的前端框架！</p>
+                            <p>
+                                <a href="http://www.bootcss.com/">
+                                    <img class="img-rounded img-fluid" src="../images/5.jpg" alt="lorem pixel">
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="tl-circ"></div>
+                    <div class="timeline-panel" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>还有很多前端框架!</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i> 8/03/2017</small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>AUI</p>
+                            <p>Amaze UI</p>
+                            <p>Frozen UI</p>
+                            <p>WeUIi</p>
+                            <p>Pure</p>
+                            <p>...</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-panel noarrow" data-scroll-reveal="enter bottom over 1s">
+                        <div class="tl-heading">
+                            <h4>...</h4>
+                            <p>
+                                <small class="text-muted">
+                                    <i class="glyphicon glyphicon-time"></i> ...</small>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>END................................</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
+</body>
+
+</html>
