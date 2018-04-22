@@ -8,7 +8,9 @@
     <title>个人博客--假注册</title>
 
     <!-- Bootstrap4 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../css/bootstrap4.min.css">
+    
     <!-- bootstrap的字体图标 -->
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -21,6 +23,10 @@
     <!-- Bootstrap4 核心 -->
     <!--    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- Bootstrap表单验证 -->
+<!--  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script> -->
+    <script src="../js/jquery.validate.min.js"></script>
+    
     <!-- 滚动显示 -->
     <!--    <script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script> -->
     <script src="../js/scrollreveal.js"></script>
@@ -30,9 +36,10 @@
     <link rel="stylesheet" href="../css/all.css">
     <script src="../js/scroll.js"></script>
     <script src="../js/tooltip.js"></script>
+    <script src="../js/registValid.js"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#RegistPage" data-offset="1">
     <div class="container" data-spy="scroll" data-target="#RegistPage" data-offset="1">
         <!--                顶层              -->
         <div id="HeadContainer" class="container" data-scroll-reveal="enter right over 1s and move 200px after 0.1s">
@@ -107,7 +114,7 @@
             <div class="col-md-9">
                 <div class="container">
                     <div class="col-md-5 col-sm-offset-4 text-center">
-                        <form id="form1">
+                        <form id="form1" method="POST">
                             <div id="Page1">
                                 <fieldset>
                                     <legend>
@@ -117,19 +124,19 @@
                                     </legend>
                                     <div class="form-group">
                                         <label for="registname">用户名：</label>
-                                        <input id="registname" class="form-control" type="text">
+                                        <input id="registname" class="form-control" name="registname" type="text"  placeholder="请输入你的用户名">
                                     </div>
                                     <div class="form-group">
                                         <label for="password">密码：</label>
-                                        <input id="password" class="form-control" type="password">
+                                        <input id="password" class="form-control" name="password" type="password"  placeholder="请输入密码">
                                     </div>
                                     <div class="form-group">
                                         <label for="repassword">确认密码：</label>
-                                        <input id="repassword" class="form-control" type="password">
+                                        <input id="repassword" class="form-control" name="repassword" type="password"  placeholder="请再次确认密码">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">邮箱：</label>
-                                        <input id="email" class="form-control" type="email">
+                                        <input id="email" class="form-control" name="email" type="email"  placeholder="请输入邮箱">
                                     </div>
                                 </fieldset>
                             </div>
@@ -137,20 +144,51 @@
                                 <fieldset>
                                     <legend>
                                         <small>
+                                            <em>拓展项</em>
+                                        </small>
+                                    </legend>
+                                    <div>
+                                        <label>
+                                            性别：
+                                            <input name="sex" type="radio" value="male" checked="checked">男
+                                            <input name="sex" type="radio" value="female">女
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="datatime">出生日期：</label>
+                                        <input id="datatime" name="datatime" class="form-control" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pase">自我介绍一下：</label>
+                                        <textarea class="form-control" name="pase" id="pase" rows="3" placeholder="简单介绍下自己"></textarea>
+                                    </div>
+                                    <label>选择以下会的技能：</label>
+                                    <div>
+                                        <label>
+                                            <input type="checkbox" name="skill" value="C++">C++语言
+                                            <input type="checkbox" name="skill" value="JAVA">JAVA语言
+                                            <input type="checkbox" name="skill" value="JS">JS语言
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div id="Page3">
+                                <fieldset>
+                                    <legend>
+                                        <small>
                                             <em>选填项</em>
                                         </small>
                                     </legend>
                                     <div class="form-group">
-                                        <label for="datatime">出生日期</label>
-                                        <input id="datatime" class="form-control" type="date">
+                                        <label for="address">地址：</label>
+                                        <input id="address" class="form-control" name="address" type="text" placeholder="可以不填">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pase">自我介绍</label>
-                                        <textarea class="form-control" id="pase" rows="3"></textarea>
+                                        <label for="phone">电话：</label>
+                                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="可以不填">
                                     </div>
                                 </fieldset>
                             </div>
-                            <div id="Page3"></div>
                             <div id="Page4">
                                 <fieldset disabled="disabled">
                                     <legend>
@@ -184,21 +222,22 @@
                                     </div>
                                 </fieldset>
                             </div>
+                            <button id="sub" type="submit" class="btn btn-default">完成提交</button>
                         </form>
                     </div>
                 </div>
             </div>
             <!--            右侧导航栏           -->
-            <nav id="RegistPage" >
-                <ul class="nav nav-pills flex-column" style="background: rgb(189,172,156)">
+            <nav id="RegistPage">
+                <ul id="act" class="nav nav-pills flex-column" style="background: rgb(189,172,156)">
                     <li class="nav-item">
                         <a href="#Page1" class="nav-link">基本项</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Page2" class="nav-link">选填项</a>
+                        <a href="#Page2" class="nav-link">拓展项</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Page3" class="nav-link">拓展项</a>
+                        <a href="#Page3" class="nav-link">选填项</a>
                     </li>
                     <li class="nav-item">
                         <a href="#Page4" class="nav-link">禁止项</a>
